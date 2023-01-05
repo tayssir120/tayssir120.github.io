@@ -1,0 +1,123 @@
+<%- include('../partials/header.ejs') %>
+<div class="hero hero3">
+</div>
+<div class="page-single movie-single movie_single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="movie-img sticky-sb">
+					<img src="<%= enseignant.coverImagePath %>" alt="">
+					<div class="movie-btn">	
+						<div>
+							<div><a href="/enseignants/<%= enseignant.id %>/edit" class="item item-1 yellowbtn"> <i class="ion-edit"></i> Edit</a></div>
+						</div>
+						<br>
+							<div><%- include('../partials/deleteForm',
+								{ url: `/enseignants/${enseignant.id}` }) %></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct main-content">
+					<h1 class="bd-hd"><%= enseignant.name %></h1>
+				<br>
+				<br>
+					<div class="movie-rate">
+						<h3 style="color: #F0F8FF ;">Enseignant</h3>
+						<h2 style="color: #F0F8FF ;"><%= enseignant.name %></h2>
+		  </div>
+				<div class="mvcast-item">											
+					<div class="cast-it">
+						<div class="cast-left">
+							<img src="images/uploads/cast1.jpg" alt="">
+							<p style="color: rgb(74, 104, 202);">Enseignant:</p>
+						</div>
+						<p><%= enseignant.name %></p>
+					</div>
+					<div class="cast-it">
+						<div class="cast-left">
+							<img src="images/uploads/cast1.jpg" alt="">
+							<p style="color: rgb(74, 104, 202);">Date of Birth:</p>
+						</div>
+						<p><%= enseignant.DateofBirth %></p>
+					</div>
+					<div class="cast-it">
+						<div class="cast-left">
+							<img src="images/uploads/cast1.jpg" alt="">
+							<p style="color: rgb(74, 104, 202);">Place of Birth:</p>
+						</div>
+						<p><%= enseignant.placeofBirth %></p>
+					</div>
+					<div class="cast-it">
+						<div class="cast-left">
+							<img src="images/uploads/cast1.jpg" alt="">
+							<p style="color: rgb(74, 104, 202);">Description:</p>
+						</div>
+						<p><%= enseignant.description %></p>
+					</div>
+					
+						</div>
+						
+					
+		</div>
+	</div>
+</div>
+</div>
+<br>
+
+<footer class="ht-footer">
+	<div class="container">
+		<div class="flex-parent-ft">
+			<div class="flex-child-ft item1">
+				 <a href="#"><img class="logo" src="images/logo2.png" alt=""></a>
+				 <p>5th Avenue st, manhattan<br>
+				New York, NY 10001</p>
+				<p>Call us: <a href="#">(+01) 202 342 6789</a></p>
+			</div>
+			<div class="flex-child-ft item2">
+				<h4>Resources</h4>
+				<ul>
+					<li><a href="#">About</a></li> 
+					<li><a href="#">Blockbuster</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Forums</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Help Center</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item3">
+				<h4>Legal</h4>
+				<ul>
+					<li><a href="#">Terms of Use</a></li> 
+					<li><a href="#">Privacy Policy</a></li>	
+					<li><a href="#">Security</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item4">
+				<h4>Account</h4>
+				<ul>
+					<li><a href="#">My Account</a></li> 
+					<li><a href="#">Watchlist</a></li>	
+					<li><a href="#">Collections</a></li>
+					<li><a href="#">User Guide</a></li>
+				</ul>
+			</div>
+			<div class="flex-child-ft item5">
+				<h4>Newsletter</h4>
+				<p>Subscribe to our newsletter system now <br> to get latest news from us.</p>
+				<form action="#">
+					<input type="text" placeholder="Enter your email...">
+				</form>
+				<a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="ft-copyright">
+		<div class="ft-left">
+			<p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
+		</div>
+		<div class="backtotop">
+			<p><a href="#" id="back-to-top">Back to top  <i class="ion-ios-arrow-thin-up"></i></a></p>
+		</div>
+	</div>
+</footer>

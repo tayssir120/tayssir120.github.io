@@ -1,0 +1,9 @@
+<% filmCoverClass = locals.large ? 'film-cover-large' : '' %>
+<% filmGridClass = locals.large ? 'film-grid-large' : '' %>
+<div class="film-grid <%= filmGridClass %>">
+  <% pfes.forEach(pfe => { %>
+    <a href="/pfes/<%= pfe.id %>">
+      <img class="film-cover <%= filmCoverClass %>" src="<%= pfe.coverImagePath %>">
+    </a>
+  <% }) %>
+</div>

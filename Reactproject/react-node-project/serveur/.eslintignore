@@ -1,0 +1,7 @@
+config
+middleware
+models
+node_modules
+public
+routes
+views

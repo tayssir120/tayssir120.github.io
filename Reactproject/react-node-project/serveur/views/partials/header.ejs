@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en" class="no-js">
+
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="index-2.html"><img class="logo" src="images/logo.JPG" ></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="dropdown first">
+							<a href="/" >Home</a>
+						</li>
+						<li class="dropdown first">
+							<a href="/pfes">Pfes</a>
+						</li>
+						<li class="dropdown first">
+							<a href="/Etudiants">Etudiants</a>
+						</li>
+						<li class="dropdown first">
+							<a href="/Enseignants">Enseignants</a>
+						</li>
+							
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">					               
+						<% if (login) { %>
+							<li class="btn signupLink"><a href="/user/signup">Welcome <%=currentUser.username%></a></li>
+							<li><a href="/user/profile">Profile</a></li>
+							<li><a href="/user/logout">Logout</a></li>
+
+							<% } else {%>
+						<li><a href="/user/signin">LOG In</a></li>
+						<li><a href="/user/signup">sign up</a></li>
+
+						<% }%>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	</div>
+</header>
+<!-- END | Header -->

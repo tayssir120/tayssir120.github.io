@@ -1,0 +1,64 @@
+<%- include('../partials/header.ejs') %>
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>Enseignants</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">Home</a></li>
+						<li> <span class="ion-ios-arrow-right"></span>Gestion des Enseignants</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- celebrity grid v2 section-->
+
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="topbar-filter user">
+					<p>Ajouter un Enseignant</p>
+					<a href="/enseignants/new" class="list"><i class="ion-ios-plus "></i></a>
+
+				</div>
+				<div class="flex-wrap-movielist grid-fav">
+					<% enseignants.forEach(enseignant => { %>
+					<div class="movie-item-style-2 movie-item-style-1 style-3">
+						<img src="<%= enseignant.coverImagePath %>" alt="">
+						<div class="hvr-inner">
+							<a  href="/enseignants/<%= enseignant.id %>"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+						</div>
+
+						
+						<div class="mv-item-infor">
+							<h6><a href="moviesingle.html"><%= enseignant.name %></a></h6>
+						</div>
+					</div>	    <% }) %>				
+			</div>
+			</div>
+			<div class="col-md-3 col-sm-12 col-xs-12">
+				<div class="sidebar">
+					<div class="sb-search sb-it">
+						<h2 class="sb-title" >Search Enseignants </i></h2>
+            <form action="/enseignants" method="GET">
+              <div class="form-row">
+                <div class="form-item">
+                  <input type="text" name="name" value="<%= searchOptions.name %>" placeholder="Name"><br>
+                  <button style="margin-left: 50px;" class="item item-1 redbtn" type="submit">Search <i class="ion-search"></i></button>
+
+                </div>
+              </div>
+            </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+

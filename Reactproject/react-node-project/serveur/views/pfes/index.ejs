@@ -1,0 +1,61 @@
+<%- include('../partials/header.ejs') %>
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>pfes</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">Home</a></li>
+						<li> <span class="ion-ios-arrow-right"></span>Gestion des pfes</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="topbar-filter">
+					<p>Ajouter un PFE</p>
+					<a href="/pfes/new" class="list"><i class="ion-ios-plus "></i></a>
+				</div>
+				<div class="flex-wrap-movielist">
+					<% pfes.forEach(pfe => { %>
+					<div class="movie-item-style-2 movie-item-style-1" >
+						
+								<img class="film-cover " src="<%= pfe.coverImagePath %>">
+						<div class="hvr-inner">
+							<a  href="/pfes/<%= pfe.id %>"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+						</div>
+						
+					
+					</div>	
+					<% }) %>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">
+        <!-- <div class="sidebar">
+          <div class="searh-form">
+            <h4 class="sb-title">Search for PFE</h4>
+            <form class="form-style-1" action="/pfes" method="GET">
+              <div class="row">
+                <div class="col-md-12 form-it">
+                  <label>Title</label>
+                  <input type="text" name="title" value="<%= searchOptions.title %>">
+                </div>
+                <div class="form-row form-row-end">
+					<button style="margin-left: 80px;" class="item item-1 redbtn" type="submit">Search <i class="ion-search"></i></button>
+                </div>
+              </div>
+            </form>
+      
+          </div>
+        </div> -->
+      </div>
+		</div>
+	</div>
+</div>
+

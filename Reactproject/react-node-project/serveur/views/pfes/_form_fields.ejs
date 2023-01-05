@@ -1,0 +1,38 @@
+
+<div class="form-row">
+  <div class="form-item">
+    <label>Title</label>
+    <input type="text" name="title" value="<%= pfe.title %>">
+  </div>
+  <div class="form-item">
+    <label>Etudiant</label>
+    <select name="etudiant">
+      <% etudiants.forEach(etudiant => { %>
+        <% if (etudiant.id === pfe.etudiant) { %>
+          <option selected label="<%= etudiant.name %>" value="<%= etudiant.id %>">
+        <% } else { %>
+          <option label="<%= etudiant.name %>" value="<%= etudiant.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item">
+    <label>Release Date</label>
+    <input type="date" name="releaseDate"
+          value="<%= pfe.releaseDate == null ? '' : pfe.releaseDate.toISOString().split('T')[0] %>">
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-item form-item-no-grow">
+    <label>Poster</label>
+    <input type="file" name="cover" class="book-cover filepond">
+  </div>
+  <div class="form-item">
+    <label>Description</label>
+    <textarea name="description"><%= pfe.description %></textarea>
+  </div>
+</div>
